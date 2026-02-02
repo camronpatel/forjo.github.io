@@ -1,5 +1,6 @@
 document.getElementById('yesBtn').addEventListener('click', function() {
   document.getElementById('danceGif').classList.remove('hidden');
+  document.getElementById('heroImg').classList.add('hidden');
 });
 
 document.getElementById('noBtn').addEventListener('click', function() {
