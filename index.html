@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Be My Valentine?</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-live="polite">
+      <h1 id="headline" class="headline"> Will you be my Valentine? </h1>
+
+      <div class="media">
+        <img id="heroImg" class="hero" src="images/valentines.gif"  />
+        <img id="danceGif" class="hero hidden" src="images/celebration.webp" alt="Dancing celebration" />
+        <p id="gifFallback" class="gif-fallback hidden">
+          (Dancing GIF goes here 💃🕺 — add <code>assets/dance.gif</code>)
+        </p>
+      </div>
+
+      <div id="actions" class="actions">
+        <button id="yesBtn" class="btn btn-yes" type="button">Yes</button>
+        <button id="noBtn" class="btn btn-no" type="button">No</button>
+      </div>
+
+      <p id="subtext" class="subtext" aria-hidden="true"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('noBtn').addEventListener('click', function() {
+      document.getElementById('yesBtn').classList.add('big');
+    });
+    document.getElementById('yesBtn').addEventListener('click', function() {
+      document.getElementById('danceGif').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
